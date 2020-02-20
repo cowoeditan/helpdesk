@@ -8,6 +8,17 @@ class TiketModel {
   final String tgl_pembuatan;
   final String tgl_pengerjaan;
   final String tgl_selesai;
+  final String image;
 
-  TiketModel(this.id, this.no_tiket, this.kerusakan, this.detail_kerusakan, this.id_user, this.id_divisi, this.tgl_pembuatan, this.tgl_pengerjaan, this.tgl_selesai);
+  TiketModel(
+      this.id,
+      this.no_tiket,
+      this.kerusakan,
+      this.detail_kerusakan,
+      this.id_user,
+      this.id_divisi,
+      this.tgl_pembuatan,
+      this.tgl_pengerjaan,
+      this.tgl_selesai,
+      this.image);
 }

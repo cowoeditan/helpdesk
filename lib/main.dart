@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:login/modal/api.dart';
-import 'package:login/views/history.dart';
-import 'package:login/views/onGoing.dart';
-import 'package:login/views/profile.dart';
-import 'package:login/views/tiket.dart';
+import 'package:helpdesk/modal/api.dart';
+import 'package:helpdesk/views/history.dart';
+import 'package:helpdesk/views/onGoing.dart';
+import 'package:helpdesk/views/profile.dart';
+import 'package:helpdesk/views/tiket.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
