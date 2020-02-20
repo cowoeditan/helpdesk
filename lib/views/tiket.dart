@@ -127,18 +127,18 @@ class _TiketState extends State<Tiket> {
                     return Container(
                       padding: EdgeInsets.all(10.0),
                       child: Row(
-                        // crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           // Image.network('http://192.168.10.27/api_helpdesk/upload/' + x.image),
-                          // Image.network(
-                          //   'http://192.168.10.27/api_helpdesk/upload/' + x.image,
-                          //   width: 100.0,
-                          //   height: 100,
-                          //   fit: BoxFit.cover,
-                          // ),
-                          // SizedBox(
-                          //   width: 10.0,
-                          // ),
+                          Image.network(
+                            'http://192.168.10.27/api_helpdesk/upload/' + x.image,
+                            width: 100.0,
+                            height: 100,
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
