@@ -114,6 +114,10 @@ class _TiketState extends State<Tiket> {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => TambahTiket(_listTiket)));
           },
+          child: Icon(Icons.add),
+          backgroundColor: Colors.green,
+          // foregroundColor: Colors.red,
+          
         ),
         body: RefreshIndicator(
           onRefresh: _listTiket,
@@ -131,9 +135,10 @@ class _TiketState extends State<Tiket> {
                         children: <Widget>[
                           // Image.network('http://192.168.10.27/api_helpdesk/upload/' + x.image),
                           Image.network(
-                            'http://192.168.10.27/api_helpdesk/upload/' + x.image,
-                            width: 100.0,
-                            height: 100,
+                            'http://192.168.10.27/api_helpdesk/upload/' +
+                                x.image,
+                            width: 50.0,
+                            height: 50,
                             fit: BoxFit.cover,
                           ),
                           SizedBox(
@@ -146,11 +151,25 @@ class _TiketState extends State<Tiket> {
                                 Text(
                                   x.no_tiket,
                                   style: TextStyle(
-                                      fontSize: 14.0,
+                                      fontSize: 12.0,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                Text(x.kerusakan),
-                                Text(x.tgl_pembuatan),
+                                Text("Kerusakan : "+x.kerusakan,
+                                    style: TextStyle(
+                                        fontSize: 8.0,
+                                        fontWeight: FontWeight.normal)),
+                                Text(
+                                  "Waktu Pembuatan : "+x.tgl_pembuatan,
+                                  style: TextStyle(
+                                      fontSize: 8.0,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                                Text(
+                                  "Status : Waiting",
+                                  style: TextStyle(
+                                      fontSize: 8.0,
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ],
                             ),
                           ),

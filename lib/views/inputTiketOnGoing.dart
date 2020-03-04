@@ -65,7 +65,10 @@ setup(){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Input Progres Ticket"),
+        backgroundColor: Colors.green,
+      ),
       body: Form(
         key: _key,
         child: ListView(
@@ -75,16 +78,17 @@ setup(){
               enabled: false,
               controller: txtKerusakan,
               onSaved: (e) => kerusakan = e,
-              decoration: InputDecoration(labelText: "Kerusakan"),
+              decoration: InputDecoration(labelText: "Kerusakan :"),
             ),
             TextFormField(
+              enabled: false,
               controller: txtDetailKerusakan,
               onSaved: (e) => detail_kerusakan = e,
-              decoration: InputDecoration(labelText: "Detail Kerusakan"),
+              decoration: InputDecoration(labelText: "Detail Kerusakan :"),
             ),
             TextFormField(
               onSaved: (e) => solusi = e,
-              decoration: InputDecoration(labelText: "Solusi"),
+              decoration: InputDecoration(labelText: "Penanganan :"),
             ),
             MaterialButton(
               onPressed: (){

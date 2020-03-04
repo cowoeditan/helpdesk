@@ -34,7 +34,8 @@ class _OnGoingState extends State<OnGoing> {
             api['id_divisi'],
             api['tgl_pembuatan'],
             api['tgl_pengerjaan'],
-            api['tgl_selesai']);
+            api['tgl_selesai'],
+            api['image']);
         list.add(ab);
       });
       setState(() {
@@ -65,7 +66,17 @@ class _OnGoingState extends State<OnGoing> {
                 return Container(
                   padding: EdgeInsets.all(10.0),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
+                      Image.network(
+                        'http://192.168.10.27/api_helpdesk/upload/' + x.image,
+                        width: 50.0,
+                        height: 50,
+                        fit: BoxFit.cover,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,10 +84,26 @@ class _OnGoingState extends State<OnGoing> {
                             Text(
                               x.no_tiket,
                               style: TextStyle(
-                                  fontSize: 14.0, fontWeight: FontWeight.bold),
+                                  fontSize: 12.0, fontWeight: FontWeight.bold),
                             ),
-                            Text(x.kerusakan),
-                            Text(x.tgl_pembuatan),
+                            Text(
+                              "Kerusakan : "+x.kerusakan,
+                              style: TextStyle(
+                                  fontSize: 8.0,
+                                  fontWeight: FontWeight.normal),
+                            ),
+                            Text(
+                              "Waktu Pembuatan : "+x.tgl_pembuatan,
+                              style: TextStyle(
+                                  fontSize: 8.0,
+                                  fontWeight: FontWeight.normal),
+                            ),
+                            Text(
+                              "Status : "+"On Progres",
+                              style: TextStyle(
+                                  fontSize: 8.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ],
                         ),
                       ),

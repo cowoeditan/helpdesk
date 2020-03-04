@@ -112,7 +112,10 @@ class _TambahTiketState extends State<TambahTiket> {
       child: Image.asset('./img/placeholder.png'),
     );
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Create Ticket"),
+          backgroundColor: Colors.green,
+      ),
       body: Form(
         key: _key,
         child: ListView(

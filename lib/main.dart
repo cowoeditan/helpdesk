@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 void main() {
   runApp(MaterialApp(
     home: Login(),
+    
   ));
 }
 
@@ -133,7 +134,10 @@ class _LoginState extends State<Login> {
       //jika kondisinya tidak login
       case LoginStatus.notSignIn:
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            title: Text("Go Helpdesk !"),
+            backgroundColor: Colors.green,
+          ),
           body: Form(
             key: _key,
             child: ListView(
@@ -331,6 +335,8 @@ class _MainMenuState extends State<MainMenu> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          title: Text("Go Helpdesk !"),
+          backgroundColor: Colors.green,
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.lock_open),
@@ -349,14 +355,14 @@ class _MainMenuState extends State<MainMenu> {
           ],
         ),
         bottomNavigationBar: TabBar(
-          labelColor: Colors.blue,
-          unselectedLabelColor: Colors.grey,
+          labelColor: Colors.blue[300],
+          unselectedLabelColor: Colors.green,
           indicator: UnderlineTabIndicator(
               borderSide: BorderSide(style: BorderStyle.none)),
           tabs: <Widget>[
             Tab(
               icon: Icon(Icons.assignment),
-              text: "Tiket",
+              text: "Ticket",
             ),
             Tab(
               icon: Icon(Icons.assignment_turned_in),
@@ -368,7 +374,7 @@ class _MainMenuState extends State<MainMenu> {
             ),
             Tab(
               icon: Icon(Icons.person_outline),
-              text: "Profil",
+              text: "Profile",
             ),
           ],
         ),
